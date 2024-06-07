@@ -1,6 +1,7 @@
 package member.run;
 
 import member.controller.MemberRepository;
+import member.controller.OverMembersException;
 import member.model.vo.Gold;
 import member.model.vo.Silver;
 import member.model.vo.Vip;
@@ -21,11 +22,26 @@ public class Run {
         System.out.println("=========================== 회원 포인트 적립 정보 ===========================");
         memberRepository.printData();
 
+        System.out.println("=========================== 회원 물품 금액 정보 ===========================");
+        int price = 10000;
+        memberRepository.printBuyInfo(price);
+
     }
- //Exception을 상속받아 구현
-//    Exception 발생시 "Member List is full" 라는 메시지 출력
+
+//Exception 발생시 "Member List is full" 라는 메시지 출력
 // OverMemberException 발생할 경우를 대비해
 // 실행클래스(Run)에서 try catch로 처리 할 것
+
+    MemberRepository memberRepository = new MemberRepository();
+
+//    try{
+//        memberRepository.memberList(
+//        for(int i=0; i <8; i++){
+//               memberRepository.insertMember();
+//            }
+//    }catch(OverMembersException e){
+//        System.out.println(e.getMessage());
+//    }
 
     public void OverMemberExeption (){
 
