@@ -12,12 +12,8 @@ public class Gold extends Member implements Buyable {
 
 //get으로 가져와서
 //set을해서 저장한다
-    double calculateInterest(){
-        List<Integer> points = memberRepository
-                .getMembers()
-                .stream()
-                .map(Member::getPoint)
-                .collect(Collectors.toList());
+public double calculateInterest2(){
+
         return 0;
     }
 

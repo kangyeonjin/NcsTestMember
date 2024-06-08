@@ -8,7 +8,7 @@ public class Silver extends Member implements Buyable{
 //    public Silver(String name, String grade, int point){
 //    }
 
-public double calculatelnterest(){
+public double calculateInterest3(){
 
         return 0;
 }

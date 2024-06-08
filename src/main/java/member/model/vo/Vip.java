@@ -11,7 +11,7 @@ public class Vip extends Member implements Buyable{
     }
 
     Run run = new Run();
-     public void calculateInterest(){
+     public void calculateInterest1(){
 
 
     }
