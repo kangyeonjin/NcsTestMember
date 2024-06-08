@@ -13,8 +13,8 @@ public class Gold extends Member implements Buyable {
 //get으로 가져와서
 //set을해서 저장한다
 public double calculateInterest2(){
-
-        return 0;
+        double interest = 0.05;
+        return getPoint() * interest;
     }
 
     int buy(int price){
