@@ -5,13 +5,10 @@ public class Silver extends Member implements Buyable{
         super(name, grade, point);
     }
 
-//    public Silver(String name, String grade, int point){
-//    }
-
-public double calculateInterest3(){
-
-        return 0;
-}
+    @Override
+    public double calculatePoint() {
+        return getPoint() * 0.02;
+    }
 
 public int buy(int price){
 

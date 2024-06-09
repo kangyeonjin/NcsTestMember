@@ -27,19 +27,20 @@ public class MemberRepository {
     public void printData(){
         for(Member member: memberList){ // 멤버 리스트를 반복함
 
-//            String grade = member.getGrade();  //멤버의 grade가져와서 저장함
-//            int points = member.getPoint();  //point가져와서 저장함
-//            double interest1 = Vip.calculateInterest1();  //이자율가져와서 저장함
-//            double interest2 = Gold.calculateInterest2();  //이자율가져와서 저장함
-//            double interest3 = Silver.calculateInterest3();  //이자율가져와서 저장함
-            String nameGradePoint = member.toString();
+            String grade = member.getGrade();  //멤버의 grade가져와서 저장함
+            int points = member.getPoint();  //point가져와서 저장함
+//
+//            String nameGradePoint = member.toString();
+//            System.out.println(nameGradePoint);
+             double interest = member.calculatePoint();
 
-            System.out.println(nameGradePoint);
+//            System.out.println(grade+points+interest1+interest2+interest3);
+            System.out.println(grade+"등급회원"+ member.getName()+"님의 포인트는"+points+"이고 이자포인트는"+interest+"입니다.");
 
         }
 
-
     }
+
     public void printBuyInfo(int price){
 
     }
