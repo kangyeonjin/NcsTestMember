@@ -32,6 +32,8 @@ public abstract class Member {
         return point;
     }
 
+    public abstract double calculatePoint();
+
     public void setPoint(int point) {
         this.point = point;
     }
