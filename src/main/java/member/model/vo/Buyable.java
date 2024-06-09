@@ -8,6 +8,7 @@ public interface Buyable {
 //회원등급에 따른 할인율을 적용하여
 //모든 회원이  price를 지불 할 때 내야할 금액을 출력
 
+
 //public void printBuyInfo(int price){
 //}
 
