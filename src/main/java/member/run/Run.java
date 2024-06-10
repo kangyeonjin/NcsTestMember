@@ -24,13 +24,13 @@ public class Run {
             throw new RuntimeException(e);
         }
 
-
         System.out.println("=========================== 회원 포인트 적립 정보 ===========================");
         memberRepository.printData();
 
         System.out.println("=========================== 회원 물품 금액 정보 ===========================");
         int price = 10000;
         memberRepository.printBuyInfo(price);
+
 
     }
 

@@ -6,6 +6,7 @@ public abstract class Member {
     private String grade;
     private int point;
 
+
     public Member(String name, String grade, int point) {
         this.name = name;
         this.grade = grade;
@@ -38,6 +39,9 @@ public abstract class Member {
         this.point = point;
     }
 
+
+
+
     @Override
     public String toString() {
         return "Member{" +
@@ -45,6 +49,7 @@ public abstract class Member {
                 ", grade='" + grade + '\'' +
                 ", point=" + point +
                 '}';
+
     }
 
 

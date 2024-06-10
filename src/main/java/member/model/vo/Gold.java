@@ -1,7 +1,5 @@
 package member.model.vo;
 
-import java.util.List;
-
 // 5%(이자율 : 0.05) 를 곱한값이 이자 포인트 메소드
 public class Gold extends Member implements Buyable {
 
@@ -10,14 +8,19 @@ public class Gold extends Member implements Buyable {
         super(name, grade, point);
     }
 
+
     @Override
     public double calculatePoint() {
         return getPoint() * 0.05;
     }
 
 
-    int buy(int price){
-        return 0;
+//    private static double DISCOUNT = 0.05;
+    @Override
+    public double buy(int price){
+        double sale = price * 0.05;
+
+        return price - sale;
     }
 
 }

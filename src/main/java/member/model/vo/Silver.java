@@ -5,15 +5,21 @@ public class Silver extends Member implements Buyable{
         super(name, grade, point);
     }
 
+
     @Override
     public double calculatePoint() {
         return getPoint() * 0.02;
     }
 
-public int buy(int price){
+//    private  static final double DISCOUNT=0.02;
+    @Override
+    public double buy(int price){
+        double sale = price * 0.02;
+        return price - sale;
+    }
 
-        return 0;
 }
 
 
-}
+
+
