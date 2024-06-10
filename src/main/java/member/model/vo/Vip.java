@@ -9,11 +9,21 @@ public class Vip extends Member implements Buyable{
         super(name, grade, point);
     }
 
+
+
     Run run = new Run();
+
 
     @Override
     public double calculatePoint() {
-        return getPoint() * 0.01;
+        return getPoint() * 0.1;
     }
 
+//    private static final double DISCOUNT = 0.1;
+
+    @Override
+    public double buy(int price) {
+        double sale = price * 0.1;
+        return price - sale;
+    }
 }

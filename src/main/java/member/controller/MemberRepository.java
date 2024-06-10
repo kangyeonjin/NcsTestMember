@@ -2,13 +2,11 @@ package member.controller;
 //멤버변수 : Silver 등급, Gold 등급, Vip 등급 등
 // 회원을 최대 10명 관리할수 있는  ArrayList
 
-import member.model.vo.Gold;
-import member.model.vo.Member;
-import member.model.vo.Silver;
-import member.model.vo.Vip;
+import member.model.vo.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class MemberRepository {
@@ -29,20 +27,33 @@ public class MemberRepository {
 
             String grade = member.getGrade();  //멤버의 grade가져와서 저장함
             int points = member.getPoint();  //point가져와서 저장함
-//
-//            String nameGradePoint = member.toString();
-//            System.out.println(nameGradePoint);
+
              double interest = member.calculatePoint();
 
-//            System.out.println(grade+points+interest1+interest2+interest3);
             System.out.println(grade+"등급회원"+ member.getName()+"님의 포인트는"+points+"이고 이자포인트는"+interest+"입니다.");
+
+        }
+    }
+
+    public void printBuyInfo(int price) {
+
+        for(Member member: memberList){
+
+            String grade = member.getGrade(); //멤버의 grade 가져와서 저장함
+            int points = member.getPoint();  //point 가져와서 저장함
+
+            double interest = member.calculatePoint();
+
+            System.out.println(grade+"등급 회원"+member.getName()+"은"+price+"원 상품을"+points+"원에 구매합니다");
 
         }
 
     }
-
-    public void printBuyInfo(int price){
-
-    }
-
 }
+
+
+
+
+
+
+
